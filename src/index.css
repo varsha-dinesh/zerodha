@@ -1,0 +1,208 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+body.chakra-ui-light {
+  background-color: #f9f9f9;
+
+}
+
+.header {
+  max-width: 100%;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .1);
+  height: 7rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 9;
+}
+
+
+.header .number {
+  font-size: x-small;
+  transform: translateY(3px);
+  margin-right: 1rem;
+  color: #4A5568;
+}
+
+.border {
+  border-left: 1px solid #eee;
+  height: 7rem;
+  margin-right: 2rem;
+  margin-left: 1rem;
+  padding: 0 !important;
+}
+
+
+
+#user {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.icon {
+  border: 1px solid RGBA(0, 0, 0, 0.48);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.green {
+  color: #4caf50;
+}
+
+.red {
+  color: #F56565;
+}
+
+.modal {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  right: auto;
+  bottom: auto;
+  width: 30%;
+  height: fit-content;
+  padding: 1rem;
+  background-color: white;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 1rem;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.input-container {
+  display: flex;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.input-container input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #ccc;
+}
+
+input[type="number"]:focus+label,
+input[type="number"]:valid+label {
+  font-size: 12px;
+  transform: translateY(20px);
+  color: #999;
+}
+
+
+.inputOne {
+  position: absolute;
+  pointer-events: none;
+  top: 12px;
+  left: 10px;
+  background-color: white;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inputTwo {
+  position: absolute;
+  pointer-events: none;
+  top: 1.5rem;
+  left: 18rem;
+  background-color: white;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.inputThree {
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: 35rem;
+  background-color: white;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+  color: #999;
+}
+
+input:disabled {
+  cursor: default;
+  border-color: rgba(118, 118, 118, 0.3);
+  color: #999;
+
+}
+
+
+
+#stopLoss,
+#target {
+  margin-right: 0.5rem;
+}
+
+.setting {
+  padding: 1.5rem 2rem;
+  /* padding-top: 1.5rem; */
+}
+
+@media screen and (max-width: 992px) {
+  .border {
+    display: none;
+  }
+
+  .modal {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    width: 100%;
+  }
+
+  .modal {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 500px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .border {
+    display: none;
+  }
+}

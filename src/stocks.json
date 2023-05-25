@@ -1,0 +1,56 @@
+[
+  {
+    "code": 500027,
+    "name": "ATUL LTD.",
+    "previous": 6944.85,
+    "price": 6943.55
+  },
+  {
+    "code": 500033,
+    "name": "FORCE MOTR",
+    "previous": 1369.66,
+    "price": 1378.77
+  },
+  {
+    "code": 500048,
+    "name": "BEML LTD",
+    "previous": 1399.88,
+    "price": 1434.44
+  },
+  {
+    "code": 500114,
+    "name": "TITAN",
+    "previous": 2773.88,
+    "price": 2886.99
+  },
+  {
+    "code": 500116,
+    "name": "IDBI BANK L",
+    "previous": 63.88,
+    "price": 56.99
+  },
+  {
+    "code": 500117,
+    "name": "DCW LTD.",
+    "previous": 43.88,
+    "price": 56.99
+  },
+  {
+    "code": 500123,
+    "name": "ELANTAS",
+    "previous": 5988.44,
+    "price": 5677.99
+  },
+  {
+    "code": 500143,
+    "name": "P.H.CAPITAL",
+    "previous": 76.44,
+    "price": 79.99
+  },
+  {
+    "code": 500147,
+    "name": "COCKERILL",
+    "previous": 2066.76,
+    "price": 2044.77
+  }
+]
