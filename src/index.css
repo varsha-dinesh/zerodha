@@ -88,43 +88,17 @@ body.chakra-ui-light {
 
 .wrapper {
   display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
 }
+
 
 .input-container {
-  display: flex;
   position: relative;
-  margin-top: 2rem;
-}
-
-.input-container input {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
   flex: 1;
-  margin-right: 10px;
-}
-
-input[type="number"] {
-  width: 50%;
-  padding: 10px;
-  font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
-  border: 1px solid #ccc;
-}
-
-input[type="number"]:focus+label,
-input[type="number"]:valid+label {
-  font-size: 12px;
-  transform: translateY(20px);
-  color: #999;
-}
-
-
-.inputOne {
-  position: absolute;
-  pointer-events: none;
-  top: 12px;
-  left: 10px;
-  background-color: white;
-  padding: 0 5px;
-  transition: all 0.3s ease;
 }
 
 .input-field {
@@ -134,35 +108,22 @@ input[type="number"]:valid+label {
   border-radius: 4px;
 }
 
-.inputTwo {
+.fixed-label {
   position: absolute;
-  pointer-events: none;
-  top: 1.5rem;
-  left: 18rem;
-  background-color: white;
+  top: 10px;
+  left: 10px;
   padding: 0 5px;
-  transition: all 0.3s ease;
-}
-
-.inputThree {
-  position: absolute;
-  pointer-events: none;
-  top: -5px;
-  left: 35rem;
   background-color: white;
-  padding: 0 5px;
-  transition: all 0.3s ease;
   color: #999;
+  transition: transform 0.3s, font-size 0.3s;
+  pointer-events: none;
 }
 
-input:disabled {
-  cursor: default;
-  border-color: rgba(118, 118, 118, 0.3);
-  color: #999;
-
+.input-field:focus+.fixed-label,
+.input-field:not(:placeholder-shown)+.fixed-label {
+  transform: translateY(-20px);
+  font-size: 12px;
 }
-
-
 
 #stopLoss,
 #target {
@@ -171,7 +132,11 @@ input:disabled {
 
 .setting {
   padding: 1.5rem 2rem;
-  /* padding-top: 1.5rem; */
+}
+
+.custom-drawer-content {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -204,5 +169,11 @@ input:disabled {
 @media screen and (max-width: 992px) {
   .border {
     display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .modal {
+    width: 40%;
   }
 }

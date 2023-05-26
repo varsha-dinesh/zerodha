@@ -5,7 +5,6 @@ import { Box, Input, InputGroup, InputLeftElement, Flex, Text } from '@chakra-ui
 import Stocks from '../stocks.json'
 import WatchList from './WatchList'
 
-
 function Search() {
 
   const [stockItem, setStockItem] = useState(Stocks)

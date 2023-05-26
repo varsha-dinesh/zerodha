@@ -7,7 +7,7 @@ import { GiAnticlockwiseRotation } from 'react-icons/gi'
 
 function Regular({ onClose, price }) {
 
-    const [value, setValue] = React.useState('1')
+    const [value, setValue] = useState('1')
 
     return (
         <>
@@ -18,36 +18,42 @@ function Regular({ onClose, price }) {
                 </Stack>
             </RadioGroup>
 
-            <div className="input-container">
-                <input type="number" id="numberInput" min="0" max="100" value={1} />
-                <label htmlFor="numberInput" className='inputOne'>Qty.</label>
-                <input type="number" id="numberInputTwo" min="0" max="100" value={price} />
-                <label htmlFor="numberInputTwo" className='inputTwo'>Price</label>
-                <input type="number" id="numberInputThree" value='0' disabled="disabled"/>
-                <label htmlFor="numberInputThree" className='inputThree'>Trigger Price</label>
+            <div className="wrapper">
+                <div class="input-container">
+                    <input type="text" id="input-field" class="input-field" defaultValue={1} />
+                    <label for="input-field" class="fixed-label">Qty</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="input-field" class="input-field" value={price} />
+                    <label for="input-field" class="fixed-label">Price</label>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="input-field" class="input-field" disabled='disabled' defaultValue={0} />
+                    <label for="input-field" class="fixed-label">Trigger Price</label>
+                </div>
             </div>
 
-            <Stack direction='row' spacing='14rem' mt='1rem'>
+            <Flex gap='14rem' mt='1rem' justifyContent='end' px='1rem'>
                 <RadioGroup onChange={setValue} value={value} ml='18rem' >
                     <Stack direction='row' spacing='1rem' fontSize='1.5rem'>
                         <Radio value='1'>Market</Radio>
                         <Radio value='2'>Limit</Radio>
                     </Stack>
                 </RadioGroup>
-                <RadioGroup onChange={setValue} value={value} ml='26rem'>
+                <RadioGroup onChange={setValue} value={value}>
                     <Stack direction='row' spacing='1rem' fontSize='1.5rem'>
                         <Radio value='1'>SL</Radio>
                         <Radio value='2'>SL-M</Radio>
                     </Stack>
                 </RadioGroup>
-            </Stack>
+            </Flex>
 
             <Flex justifyContent='end' mt='1rem' fontSize='1.3rem' color='#4299E1'>
                 <Text>More Options</Text>
                 <i><MdKeyboardArrowDown size={20} color='#4299E1' /></i>
             </Flex>
 
-            <Flex gap='6rem' mt='2rem' >
+            <Flex gap='6rem' mt='2rem' px='1rem'>
                 <Image src='./GTT.png' height='1.5rem' />
                 <div>
                     <input type='checkbox' id='stopLoss' />
@@ -57,7 +63,7 @@ function Regular({ onClose, price }) {
                     <input type='checkbox' id='target' />
                     <label htmlFor='target'>Target</label>
                 </div>
-                <Text color='#4299E1'>Learn more</Text>
+                <Text color='#4299E1' textAlign='end'>Learn more</Text>
             </Flex>
 
             <Stack direction='row' mt='2rem' p='2rem 1rem' backgroundColor='blackAlpha.50' justifyContent='space-between'>
